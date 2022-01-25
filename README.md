@@ -134,56 +134,6 @@ Post a link to your GitHub repository in BootCamp Spot. The following should be 
 ### Hint
 
 For comparing time and dates, take a look at the [date/time functions and operators](https://www.postgresql.org/docs/8.0/functions-datetime.html) in the PostgreSQL documentation.
-
----
-### Requirements
-
-#### Data Modeling  (20 points)
-
-##### To receive all points, your code must:
-
-* Define a database model. (10 points)
-* Use the defined model to create a PostgreSQL database. (10 points)
-
-#### Data Engineering  (20 points)
-
-##### To receive all points, your code must:
-
-* Create a database schema for each table and relationship. (5 points)
-* Specify the data types. (5 points)
-* Define primary keys. (5 points)
-* Define foreign keys. (5 points)
-
-#### Data Analysis  (30 points)
-
-##### To receive all points, your code must:
-
-* Identify fraudulent transactions. (10 points)
-* Utilize SQL and Pandas DataFrames for a report within Jupyter Notebook. (10 points)
-* Provide a visual data analysis of fraudulent transactions using Pandas, Plotly Express, hvPlot, and SQLAlchemy to create the visualizations. (10 points)
-
-#### Coding Conventions and Formatting (10 points)
-
-##### To receive all points, your code must:
-
-* Place imports at the beginning of the file, just after any module comments and docstrings and before module globals and constants. (3 points)
-* Name functions and variables with lowercase characters and with words separated by underscores. (2 points)
-* Follow Don't Repeat Yourself (DRY) principles by creating maintainable and reusable code. (3 points)
-* Use concise logic and creative engineering where possible. (2 points)
-
-#### Deployment and Submission (10 points)
-
-##### To receive all points, you must:
-
-* Submit a link to a GitHub repository that’s cloned to your local machine and contains your files. (5 points)
-* Include appropriate commit messages in your files. (5 points)
-
-#### Code Comments (10 points)
-
-##### To receive all points, your code must:
-
-* Be well commented with concise, relevant notes that other developers can understand. (10 points)
-
 ---
 
 © 2021 Trilogy Education Services
