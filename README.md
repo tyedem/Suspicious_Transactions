@@ -1,4 +1,4 @@
-# Unit 7 Homework Assignment: Looking for Suspicious Transactions
+# Looking for Suspicious Transactions
 
 ![Credit card fraudster](Images/credit_card_fraudster.jpg)
 
