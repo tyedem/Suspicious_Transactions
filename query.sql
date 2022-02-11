@@ -58,15 +58,19 @@ ORDER by amount DESC;
 ---When analyzing transactions made at or after 9am, most larger purchases are made after 12pm
 ---with occasional larger purchases before 12pm.
 
-SELECT *
-FROM transaction as a
-WHERE date_part ('hour', date) >= 9
-ORDER by amount <=5 DESC;
-
-SELECT name, AS merchant
-FROM cardholder as a
-INNER JOIN credit_card as b ON a.id = b.cardholder_id
-INNER JOIN transaction as c ON b.card = c.card
-GROUP BY name
-ORDER BY name ASC;
+CREATE VIEW top_5_merchants_fraud_risk AS
+--Define table columns
+SELECT m.name AS merchant, mc.name AS category,
+	COUNT(t.amount) AS less_than_2
+--Associate keys for table joins
+FROM transaction AS t
+JOIN merchant as m ON m.id = t.id_merchant
+JOIN merchant_category AS mc ON mc.id = m.id_merchant_category
+--Assign condition for transactions at less than $2.00
+WHERE t.amount < 2
+--Group table by name
+GROUP BY m.name, mc.name
+--Order by decending order with limit of 5
+ORDER BY less_than_2 DESC
+LIMIT 5;
 
